@@ -15,7 +15,7 @@ var dataFileToAdd = 'data/bike_routes.geojson';
 
 var featureLayer = L.mapbox.featureLayer().loadURL(data FileToAdd).addTo(map);
 
-featureLayer.on('ready', function(){
+featureLayer.on('ready',function(){
   this.setStyle({
     'color': '#ec008c',
     'fillColor': '#ec008c',
@@ -25,3 +25,8 @@ featureLayer.on('ready', function(){
   map.fitBounds(featureLayer.getBounds());
 });
 
+featureLayer.on('ready',function(){
+  this.eachLayer(function(layer){
+    layer.bindPopup('Hi, Im the park called ' + layer.feature.properties.NAME);
+  });
+});
