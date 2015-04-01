@@ -20,7 +20,7 @@ featureLayer.on('ready', function(){
     'color': '#ec008c',
     'fillColor': '#ec008c',
     'weight':4,
-    'opacity': .8
+    'opacity': .7
   });
   map.fitBounds(featureLayer.getBounds());
 });
